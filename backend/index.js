@@ -8,14 +8,14 @@ const Product = require("./db/Product");
 app.use(express.json());
 // app.use(cors());
 app.use(cors({
-  origin: "https://ecommerce-dashboard-wine-nu.vercel.app/", // Vercel frontend ka origin
+  origin: "https://ecommerce-dashboard-wine-nu.vercel.app/", // Vercel frontend origin
   methods: ["GET", "POST", "PUT", "DELETE"], // Allowed methods
-  credentials: true, // Agar cookies required hain
+  credentials: true, // if cookies allowed
 }));
 
 // Manually setting headers for each route (if needed)
 app.use((req, resp, next) => {
-  resp.setHeader("Access-Control-Allow-Origin", "https://ecommerce-dashboard-wine-nu.vercel.app"); // Vercel frontend ka origin
+  resp.setHeader("Access-Control-Allow-Origin", "https://ecommerce-dashboard-wine-nu.vercel.app"); // Vercel frontend origin
   resp.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE"); // Allowed methods
   resp.setHeader("Access-Control-Allow-Headers", "Content-Type"); // Allowed headers
   next(); // Move to the next middleware or route
