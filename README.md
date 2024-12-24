@@ -7,14 +7,12 @@ A full-stack MERN (MongoDB, Express.js, React.js, Node.js) ecommerce dashboard a
 - **User Authentication**
   - Secure login/signup system
   - Protected routes and authorized access
-  - JWT-based authentication
 
 - **Product Management**
   - View all products in an organized dashboard
   - Add new products with details and images
   - Edit existing product information
   - Delete products from inventory
-  - Real-time updates across the platform
 
 - **Responsive Design**
   - Modern and clean user interface
@@ -28,18 +26,15 @@ A full-stack MERN (MongoDB, Express.js, React.js, Node.js) ecommerce dashboard a
   - React Router for navigation
   - Redux for state management
   - Material UI components
-  - Axios for API requests
+  - Fetch() for API requests
 
 - **Backend** 
   - Node.js
   - Express.js
   - MongoDB for database
-  - JWT for authentication
-  - Bcrypt for password hashing
+  - CORS for cors policy handling
+  - Centralised Error Handling
 
-## Live Demo
-
-Check out the live demo: [Ecommerce Dashboard](https://ecommerce-dashboard-wine-nu.vercel.app/)
 
 ## Installation
 
