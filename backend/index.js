@@ -13,6 +13,14 @@ app.use(cors({
   credentials: true, // Agar cookies required hain
 }));
 
+// Manually setting headers for each route (if needed)
+app.use((req, resp, next) => {
+  resp.setHeader("Access-Control-Allow-Origin", "https://ecommerce-dashboard-wine-nu.vercel.app"); // Vercel frontend ka origin
+  resp.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE"); // Allowed methods
+  resp.setHeader("Access-Control-Allow-Headers", "Content-Type"); // Allowed headers
+  next(); // Move to the next middleware or route
+});
+
 app.post("/register", async (req, resp) => {
   let user = new User(req.body);
   let result = await user.save();
