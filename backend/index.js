@@ -6,7 +6,12 @@ const User = require("./db/User");
 const Product = require("./db/Product");
 
 app.use(express.json());
-app.use(cors());
+// app.use(cors());
+app.use(cors({
+  origin: "https://ecommerce-dashboard-wine-nu.vercel.app/", // Vercel frontend ka origin
+  methods: ["GET", "POST", "PUT", "DELETE"], // Allowed methods
+  credentials: true, // Agar cookies required hain
+}));
 
 app.post("/register", async (req, resp) => {
   let user = new User(req.body);
